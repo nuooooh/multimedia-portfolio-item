@@ -6,493 +6,488 @@
     <title>박종훈</title>
     <script src="/js/script.js"></script>
     <style>
-                                         * {
-                                                                                                                            margin: 0;
-                                                                                                                            padding: 0;
-                                                                                                                            box-sizing: border-box;
-                                                                                                                            text-decoration: none;
-                                                                                                                            list-style: none;
-                                                                                                                          }
-                                                                                                                          html,
-                                                                                                                          body {
-                                                                                                                            scroll-behavior: smooth;
-                                                                                                                          }
+                                               * {
+                                                                                                                                  margin: 0;
+                                                                                                                                  padding: 0;
+                                                                                                                                  box-sizing: border-box;
+                                                                                                                                  text-decoration: none;
+                                                                                                                                  list-style: none;
+                                                                                                                                }
+                                                                                                                                html,
+                                                                                                                                body {
+                                                                                                                                  scroll-behavior: smooth;
+                                                                                                                                }
 
-                                                                                                                          .wrap {
-                                                                                                                            width: 1200px;
-                                                                                                                            margin: 0 auto;
-                                                                                                                          }
+                                                                                                                                .wrap {
+                                                                                                                                  width: 1200px;
+                                                                                                                                  margin: 0 auto;
+                                                                                                                                }
 
-                                                                                                                          .header {
-                                                                                              position: fixed;
-                                                                                              top: 0;
-                                                                                              z-index: 100000;
-                                                                                              background-color: #ffffff;
-                                                                                              width: 1200px;
-                                                                                              display: flex; /* 플렉스 박스를 사용하여 가로 배치 */
-                                                                                              justify-content: space-between; /* 양 끝으로 배치 */
-                                                                                              align-items: center; /* 수직 중앙 정렬 */
-                                                                                              padding: 50px 30px; /* 위아래 여백 20px, 좌우 여백 20px */
-                                                                                              background-color: #f8f9fa; /* 헤더 배경색 */
-                                                                                              border-bottom: 3px solid #7079cc; /* 헤더 하단 테두리 */
-                                                                                            }
-                                                                                                                          /* 헤더의 높이 설정 */
-                                                                                                                          .header-height {
-                                                                                                                            height: 60px; /* 헤더의 높이 (원하는 값으로 조정) */
-                                                                                                                          }
+                                                                                                                                .header {
+                                                                                                    position: fixed;
+                                                                                                    top: 0;
+                                                                                                    z-index: 100000;
+                                                                                                    background-color: #ffffff;
+                                                                                                    width: 1200px;
+                                                                                                    display: flex; /* 플렉스 박스를 사용하여 가로 배치 */
+                                                                                                    justify-content: space-between; /* 양 끝으로 배치 */
+                                                                                                    align-items: center; /* 수직 중앙 정렬 */
+                                                                                                    padding: 50px 30px; /* 위아래 여백 20px, 좌우 여백 20px */
+                                                                                                    background-color: #f8f9fa; /* 헤더 배경색 */
+                                                                                                    border-bottom: 3px solid #7079cc; /* 헤더 하단 테두리 */
+                                                                                                  }
+                                                                                                                                /* 헤더의 높이 설정 */
+                                                                                                                                .header-height {
+                                                                                                                                  height: 60px; /* 헤더의 높이 (원하는 값으로 조정) */
+                                                                                                                                }
 
-                                                                                                                          .logo {
-                                                                                                                            position: relative;
-                                                                                                                            font-size: 50px;
-                                                                                                                            color: #7079cc;
-                                                                                                                          }
-                                                                                                                          .logo span {
-                                                                                                                            font-weight: bold; /* 텍스트 굵기 조정 */
-                                                                                                                          }
+                                                                                                                                .logo {
+                                                                                                                                  position: relative;
+                                                                                                                                  font-size: 50px;
+                                                                                                                                  color: #7079cc;
+                                                                                                                                }
+                                                                                                                                .logo span {
+                                                                                                                                  font-weight: bold; /* 텍스트 굵기 조정 */
+                                                                                                                                }
 
-                                                                                                                          .logo .highlight {
-                                                                                                                            color: #313768; /
-                                                                                                                          }
+                                                                                                                                .logo .highlight {
+                                                                                                                                  color: #313768; /
+                                                                                                                                }
 
-                                                                                                                          .logo span:not(.highlight) {
-                                                                                                                            color: #7079cc;
-                                                                                                                          }
-                                                                                                                          .navi {
-                                                                                                                            display: flex;
-                                                                                                                            gap: 15px;
-                                                                                                                            font-size: 15px;
-                                                                                                                            font-weight: bold;
-                                                                                                                          }
+                                                                                                                                .logo span:not(.highlight) {
+                                                                                                                                  color: #7079cc;
+                                                                                                                                }
+                                                                                                                                .navi {
+                                                                                                                                  display: flex;
+                                                                                                                                  gap: 15px;
+                                                                                                                                  font-size: 15px;
+                                                                                                                                  font-weight: bold;
+                                                                                                                                }
 
-                                                                                                                          .header .navi li a {
-                                                                                                                            color: #7079cc;
-                                                                                                                          }
-                                                                                                                          .header .navi li {
-                                                                                                                            padding: 10px 20px; /* 패딩 조정 */
-                                                                                                                            margin: 5px; /* 마진 조정 */
-                                                                                                                            border-radius: 15px; /* 모서리 둥글게 */
-                                                                                                                          }
+                                                                                                                                .header .navi li a {
+                                                                                                                                  color: #7079cc;
+                                                                                                                                }
+                                                                                                                                .header .navi li {
+                                                                                                                                  padding: 10px 20px; /* 패딩 조정 */
+                                                                                                                                  margin: 5px; /* 마진 조정 */
+                                                                                                                                  border-radius: 15px; /* 모서리 둥글게 */
+                                                                                                                                }
 
-                                                                                                                          .header .navi li.nav-item-about {
-                                                                                                                            background-color: #dadeff; /* 예시 배경색 */
-                                                                                                                          }
+                                                                                                                                .header .navi li.nav-item-about {
+                                                                                                                                  background-color: #dadeff; /* 예시 배경색 */
+                                                                                                                                }
 
-                                                                                                                          .header .navi li.nav-item-project {
-                                                                                                                            background-color: #dadeff; /* 예시 배경색 */
-                                                                                                                          }
+                                                                                                                                .header .navi li.nav-item-project {
+                                                                                                                                  background-color: #dadeff; /* 예시 배경색 */
+                                                                                                                                }
 
-                                                                                                                          .header .navi li.nav-item-journey {
-                                                                                                                            background-color: #dadeff; /* 예시 배경색 */
-                                                                                                                          }
+                                                                                                                                .header .navi li.nav-item-journey {
+                                                                                                                                  background-color: #dadeff; /* 예시 배경색 */
+                                                                                                                                }
 
-                                                                                                                          .header .navi li.nav-item-contact {
-                                                                                                                            background-color: #dadeff; /* 예시 배경색 */
-                                                                                                                          }
-                                                                                                                          section {
-                                                                                                                            position: relative;
+                                                                                                                                .header .navi li.nav-item-contact {
+                                                                                                                                  background-color: #dadeff; /* 예시 배경색 */
+                                                                                                                                }
+                                                                                                                                section {
+                                                                                                                                  position: relative;
+                                                                                                                                  width: 100%;
+                                                                                                                                  /* background-color: #ddd; */
+                                                                                                                                }
+                                                                                                                                section span {
+                                                                                                                                  position: absolute;
+                                                                                                                                  top: 50%;
+                                                                                                                                  left: 50%;
+                                                                                                                                  transform: translate(-50%, -50%);
+                                                                                                                                }
+
+                                                                                                                                #home {
+                                                                                                                            padding-top: 150px; /* 헤더의 높이만큼 여백 추가 */
                                                                                                                             width: 100%;
-                                                                                                                            /* background-color: #ddd; */
-                                                                                                                          }
-                                                                                                                          section span {
-                                                                                                                            position: absolute;
-                                                                                                                            top: 50%;
-                                                                                                                            left: 50%;
-                                                                                                                            transform: translate(-50%, -50%);
+                                                                                                                            background-color: #f8f8ff; /* 배경색 설정 (필요에 따라 조정) */
+                                                                                                                            height: 100%;
+                                                                                                                            padding-bottom: 200px;
+                                                                                                                            border-bottom: 3px solid #7079CC;
                                                                                                                           }
 
-                                                                                                                          #home {
-                                                                                                                      padding-top: 150px; /* 헤더의 높이만큼 여백 추가 */
-                                                                                                                      width: 100%;
-                                                                                                                      background-color: #f8f8ff; /* 배경색 설정 (필요에 따라 조정) */
-                                                                                                                      height: 100%;
-                                                                                                                      padding-bottom: 200px;
-                                                                                                                      border-bottom: 3px solid #7079CC;
+                                                                                                                          .home-video {
+                                                                                                                      width: 90%; /* 비디오 컨테이너의 가로 너비를 전체 너비의 80%로 설정 */
+                                                                                                                      max-width: 1200px; /* 비디오의 최대 너비를 1200px로 설정 */
+                                                                                                                      margin: 0 auto; /* 비디오를 중앙 정렬 */
+                                                                                                                      padding-top: 20px; /* 비디오 위에 패딩 추가 */
+                                                                                                                      box-sizing: border-box; /* 패딩과 테두리를 포함하여 전체 너비와 높이 계산 */
+                                                                                                                      margin-bottom: 200px;
                                                                                                                     }
 
-                                                                                                                    .home-video {
-                                                                                                                width: 90%; /* 비디오 컨테이너의 가로 너비를 전체 너비의 80%로 설정 */
-                                                                                                                max-width: 1200px; /* 비디오의 최대 너비를 1200px로 설정 */
-                                                                                                                margin: 0 auto; /* 비디오를 중앙 정렬 */
-                                                                                                                padding-top: 20px; /* 비디오 위에 패딩 추가 */
-                                                                                                                box-sizing: border-box; /* 패딩과 테두리를 포함하여 전체 너비와 높이 계산 */
-                                                                                                                margin-bottom: 200px;
+                                                                                                                    .home-video video {
+                                                                                                                      width: 100%; /* 비디오의 너비를 컨테이너의 너비에 맞춤 */
+                                                                                                                      height: auto; /* 비디오의 높이를 자동으로 조정하여 비율 유지 */
+                                                                                                                      display: block; /* 블록 요소로 설정하여 여백 제거 */
+                                                                                                                    }
+                                                                                                                                .footer {
+                                                                                                                                  position: relative;
+                                                                                                                                  width: 100%;
+                                                                                                                                  height: 200px;
+                                                                                                                                }
+
+                                                                                                                                .home-main p {
+                                                                                                                text-align: center; /* 텍스트를 중앙 정렬 */
+                                                                                                                font-size: 20px; /* 글자 크기 (필요에 따라 조정) */
+                                                                                                                line-height: 1.5; /* 줄 높이 (필요에 따라 조정) */
+                                                                                                                color: #7079CC;
+                                                                                                                font-weight: 500;
                                                                                                               }
 
-                                                                                                              .home-video video {
-                                                                                                                width: 100%; /* 비디오의 너비를 컨테이너의 너비에 맞춤 */
-                                                                                                                height: auto; /* 비디오의 높이를 자동으로 조정하여 비율 유지 */
-                                                                                                                display: block; /* 블록 요소로 설정하여 여백 제거 */
-                                                                                                              }
-                                                                                                                          .footer {
-                                                                                                                            position: relative;
-                                                                                                                            width: 100%;
-                                                                                                                            height: 200px;
-                                                                                                                          }
 
-                                                                                                                          .home-main p {
-                                                                                                          text-align: center; /* 텍스트를 중앙 정렬 */
-                                                                                                          font-size: 20px; /* 글자 크기 (필요에 따라 조정) */
-                                                                                                          line-height: 1.5; /* 줄 높이 (필요에 따라 조정) */
-                                                                                                          color: #7079CC;
-                                                                                                          font-weight: 500;
+
+                                                                                                              .about-wrap{
+                                                                                                                background-color: #ffffff;
+                                                                                                                position: relative; /* 상대 위치로 설정 */
+                                              z-index: 100;
+                                              padding-bottom: 150px;
+                                              border-bottom: 3px solid #7079cc;
+
+                                            }
+
+                                                                                                        .about-about{
+                                                                                                          padding-top: 50px;
+                                                                                                          padding-bottom: 100px;
                                                                                                         }
+                                                                                                              .about-about p {
+                                                                                                              font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+                                                                                                              font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+                                                                                                              color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+                                                                                                              text-align: center;
+                                                                                                            }
+
+                                                                                                            .about-main{
+                                                                                                              display: flex;
+                                                                                                              align-items: center; /* 수직 중앙 정렬 */
+                                                                                                              justify-content: center; /* 수평 중앙 정렬 */
+                                                                                                              gap: 20px; /* 자식 요소들 사이의 간격 설정 */
+                                                                                                            }
+
+                                                                                                            .about-img img{
+                                                                                                              margin-left: 100px;
+                                                                                                              margin-right: 30px;
+                                                                                                              width: 200px;
+                                                                                                              border-radius: 112.5px;
+                                                                                                            }
+                                                                                                            .about-name {
+                                                                            display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
+                                                                            gap: 5px; /* 두 섹션 간의 간격 */
+                                                                            margin-left: 100px;
+                                                                          }
+
+                                                                          .about-name-1, .about-name2 {
+                                                                            display: flex;
+                                                                            flex-direction: column;
+                                                                          }
 
 
 
-                                                                                                        .about-wrap{
-                                                                                                          background-color: #ffffff;
-                                                                                                          position: relative; /* 상대 위치로 설정 */
-                                        z-index: 100;
-                                        padding-bottom: 150px;
-                                        border-bottom: 3px solid #7079cc;
+                                                                          .about-footer{
+                                                                            text-align: center;
+                                                                            font-size: 15px;
+                                                                            font-weight: 500;
+                                                                            margin: 100px;
+                                                                          }
+                                                                          .about-circle{
+                                                                            display: flex;
+                                                                            align-items: center;
+                                                                            gap: 200px;
+                                                                          }
+                                                              .about-circle1{
+                                                                width: 500px; /* 컨테이너의 너비를 50px로 설정 */
+                                                                height: 500px; /* 컨테이너의 높이를 50px로 설정 */
+                                                                overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
+                                                              }
+                                                              .about-circle1 svg{
+                                                                width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
+                                                                height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
+                                                              }
+                                                              .about-circle2{
+                                                                width: 500px; /* 컨테이너의 너비를 50px로 설정 */
+                                                                height: 500px; /* 컨테이너의 높이를 50px로 설정 */
+                                                                overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
+                                                              }
+                                                              .about-circle2 svg{
+                                                                width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
+                                                                height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
+                                                              }
+                                                        .project-wrap{
+                                                          position: relative;
+                                                          z-index: 99;
+                                                          padding-top: 50px;
+                                                          padding-bottom: 100px;
+                                                          background-color: #F8F8FF;
+                                                        }
+                                                        .project-project{
+                                                          font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+                                                          font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+                                                          color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+                                                          text-align: center;
+
+                                                        }
+
+                                                        .project-card-point{
+                                background-color: #fbfbfb;
+                                display: flex;
+                                width: 80%; /* 원하는 너비로 설정, 예: 80% */
+                                  max-width: 1200px; /* 최대 너비를 설정, 옵션 */
+                                  margin: 0 auto; /* 가운데 정렬 (수평 방향) */
+                                  margin-top: 150px;
+                                  padding: 40px;
+                                  border-radius: 25px;
+                            background-color: #ffffff;
+                            box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
+                            justify-content: space-between;
+                          }
+
+
+                                                        .project-card-left{
+                                                          margin-right: 20px;
+                                                        }
+
+                                                        .project-card-video {
+                                        width: 100%; /* 부모 컨테이너에 맞게 조절 */
+                                        max-width: 500px; /* 비디오의 최대 너비를 설정 */
+                                        height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
 
                                       }
 
-                                                                                                  .about-about{
-                                                                                                    padding-top: 50px;
-                                                                                                    padding-bottom: 100px;
-                                                                                                  }
-                                                                                                        .about-about p {
-                                                                                                        font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-                                                                                                        font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-                                                                                                        color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-                                                                                                        text-align: center;
-                                                                                                      }
-
-                                                                                                      .about-main{
-                                                                                                        display: flex;
-                                                                                                        align-items: center; /* 수직 중앙 정렬 */
-                                                                                                        justify-content: center; /* 수평 중앙 정렬 */
-                                                                                                        gap: 20px; /* 자식 요소들 사이의 간격 설정 */
-                                                                                                      }
-
-                                                                                                      .about-img img{
-                                                                                                        margin-left: 100px;
-                                                                                                        margin-right: 30px;
-                                                                                                        width: 200px;
-                                                                                                        border-radius: 112.5px;
-                                                                                                      }
-                                                                                                      .about-name {
-                                                                      display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
-                                                                      gap: 5px; /* 두 섹션 간의 간격 */
-                                                                      margin-left: 100px;
-                                                                    }
-
-                                                                    .about-name-1, .about-name2 {
-                                                                      display: flex;
-                                                                      flex-direction: column;
-                                                                    }
-
-
-
-                                                                    .about-footer{
-                                                                      text-align: center;
-                                                                      font-size: 15px;
-                                                                      font-weight: 500;
-                                                                      margin: 100px;
-                                                                    }
-                                                                    .about-circle{
-                                                                      display: flex;
-                                                                      align-items: center;
-                                                                      gap: 200px;
-                                                                    }
-                                                        .about-circle1{
-                                                          width: 500px; /* 컨테이너의 너비를 50px로 설정 */
-                                                          height: 500px; /* 컨테이너의 높이를 50px로 설정 */
-                                                          overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
-                                                        }
-                                                        .about-circle1 svg{
-                                                          width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
-                                                          height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
-                                                        }
-                                                        .about-circle2{
-                                                          width: 500px; /* 컨테이너의 너비를 50px로 설정 */
-                                                          height: 500px; /* 컨테이너의 높이를 50px로 설정 */
-                                                          overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
-                                                        }
-                                                        .about-circle2 svg{
-                                                          width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
-                                                          height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
-                                                        }
-                                                  .project-wrap{
-                                                    position: relative;
-                                                    z-index: 99;
-                                                    padding-top: 50px;
-                                                    padding-bottom: 100px;
-                                                    background-color: #F8F8FF;
-                                                  }
-                                                  .project-project{
-                                                    font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-                                                    font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-                                                    color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-                                                    text-align: center;
-
-                                                  }
-
-                                                  .project-card-point{
-                          background-color: #fbfbfb;
-                          display: flex;
-                          width: 80%; /* 원하는 너비로 설정, 예: 80% */
-                            max-width: 1200px; /* 최대 너비를 설정, 옵션 */
-                            margin: 0 auto; /* 가운데 정렬 (수평 방향) */
-                            margin-top: 150px;
-                            padding: 40px;
-                            border-radius: 25px;
-                      background-color: #ffffff;
-                      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
-                      justify-content: space-between;
+                                      .project-card-video video {
+                                        width: 100%; /* 부모 컨테이너에 맞게 비디오의 너비를 조절 */
+                                        height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
+                                        border-radius: 25px;
+                                      }
+                                      .project-card-link{
+                                        text-align: center;
+                                        background-color: #7079cc;
+                                        color: #ddd;
+                                        border-radius: 30px;
+                                        margin-top: 10px;
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                      }
+                                      .project-card-right{
+                                        font-weight:600;
+                                      }
+                                      .link-text {
+                      color: #f8f8f8; /* 기본 링크 색상 */
+                      text-decoration: none; /* 기본 밑줄 제거 */
+                      font-size: 16px; /* 폰트 크기 설정 */
+                      font-weight: bold; /* 텍스트 굵기 설정 */
                     }
 
+                    .title {
+                color: #7079cc; /* 색상 변경 */
+                margin-bottom: 10px; /* 각 타이틀 아래에 10px 공백 추가 */
 
-                                                  .project-card-left{
-                                                    margin-right: 20px;
-                                                  }
-
-                                                  .project-card-video {
-                                  width: 100%; /* 부모 컨테이너에 맞게 조절 */
-                                  max-width: 500px; /* 비디오의 최대 너비를 설정 */
-                                  height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
-
-                                }
-
-                                .project-card-video video {
-                                  width: 100%; /* 부모 컨테이너에 맞게 비디오의 너비를 조절 */
-                                  height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
-                                  border-radius: 25px;
-                                }
-                                .project-card-link{
-                                  text-align: center;
-                                  background-color: #7079cc;
-                                  color: #ddd;
-                                  border-radius: 30px;
-                                  margin-top: 10px;
-                                  padding-top: 10px;
-                                  padding-bottom: 10px;
-                                }
-                                .project-card-right{
-                                  font-weight:600;
-                                }
-                                .link-text {
-                color: #f8f8f8; /* 기본 링크 색상 */
-                text-decoration: none; /* 기본 밑줄 제거 */
-                font-size: 16px; /* 폰트 크기 설정 */
-                font-weight: bold; /* 텍스트 굵기 설정 */
+              }
+              h1 {
+                margin-bottom: 30px; /* 제목 아래에 20px 공백 추가 */
               }
 
-              .title {
-          color: #7079cc; /* 색상 변경 */
-          margin-bottom: 10px; /* 각 타이틀 아래에 10px 공백 추가 */
 
-        }
-        h1 {
-          margin-bottom: 30px; /* 제목 아래에 20px 공백 추가 */
-        }
+            .journey-wrap{
+              width: 1200px; /* 고정 너비 설정 */
+              margin: 0 auto; /* 중앙 정렬 */
+                                                          position: relative;
+                                                          z-index: 98;
+                                                          padding-top: 50px;
+                                                          padding-bottom: 100px;
+                                                          background-color: #ffffff;
+                                                          border-bottom: 3px solid #7079cc;
+                                                        }
 
+                                                        .journey-journey{
+                                                          font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+                                                          font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+                                                          color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+                                                          text-align: center;
+                                                          padding-top: 50px;
+                                                        padding-bottom: 100px;}
 
-      .journey-wrap{
-        width: 1200px; /* 고정 너비 설정 */
-        margin: 0 auto; /* 중앙 정렬 */
-                                                    position: relative;
-                                                    z-index: 98;
-                                                    padding-top: 50px;
-                                                    padding-bottom: 100px;
-                                                    background-color: #ffffff;
-                                                    border-bottom: 3px solid #7079cc;
-                                                  }
-                                                  
-                                                  .journey-journey{
-                                                    font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-                                                    font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-                                                    color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-                                                    text-align: center;
-                                                    padding-top: 50px;
-                                                  padding-bottom: 100px;}
+                                                        .journey-cards{
+                                                          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성 */
+          grid-template-rows: repeat(3, auto); /* 행은 자동 크기 조절 */
+          gap: 50px; /* 영역 간의 간격 */
+          /* height: 100vh; 화면 전체 높이 */
+          padding: 10px; /* 컨테이너 내부 여백 */
+          box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
+                                                        }
+                                                        .journey-card {
+                                                          background-color: #f0f0f0;
+          border: 1px solid #ddd;
+          display: flex;
+          font-size: 24px;
+          color: #333;
+          position: relative;
+      }
+      .journey-card{
+        flex-direction: column; /* 세로 방향으로 배치 */
+      width: 330px;
+      height: 500px;
+      background-color: #f5f5f5;}
+      /* 각 영역 설정 */
+      .journey-header {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 15px;
+      }
 
-                                                  .journey-cards{
-                                                    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성 */
-    grid-template-rows: repeat(3, auto); /* 행은 자동 크기 조절 */
-    gap: 50px; /* 영역 간의 간격 */
-    /* height: 100vh; 화면 전체 높이 */
-    padding: 10px; /* 컨테이너 내부 여백 */
-    box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
-                                                  }
-                                                  .journey-card {
-                                                    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    display: flex;
-    font-size: 24px;
-    color: #333;
-    position: relative;
-}
-.journey-card{
-  flex-direction: column; /* 세로 방향으로 배치 */
-width: 330px;
-height: 500px;
-background-color: #f5f5f5;}
-/* 각 영역 설정 */
-.journey-header {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 15px;
-}
+      .journey-main {
+        display: flex;
+          justify-content: center; /* 수평 중앙 정렬 */
+          align-items: center; /* 수직 중앙 정렬 */
+          width: 100%;
+          height: auto; /* 또는 필요한 높이 */
+          background-color: #f0f0f0; /* 배경색 설정 (선택 사항) */
+      }
 
-.journey-main {
-  display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
-    width: 100%;
-    height: auto; /* 또는 필요한 높이 */
-    background-color: #f0f0f0; /* 배경색 설정 (선택 사항) */
-}
+      .journey-footer {
+        padding: 10px;
+        font-size: 90%;
+        padding-top: 15px;
+        margin-left: 10px;
+      }
 
-.journey-footer {
-  padding: 10px;
-  font-size: 90%;
-  padding-top: 15px;
-  margin-left: 10px;
-}
+      .journey-card video {
+        max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
+          max-height: 30vh; /* 화면 높이의 30%까지 크기 조정 */
+          width: auto; /* 비율 유지 */
+          height: auto; /* 비율 유지 */
+      }
+      .journey-header-left{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 5px;
+      }
+      .journey-header-left p{
+        font-size: 13px;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-weight: bold;
 
-.journey-card video {
-  max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
-    max-height: 30vh; /* 화면 높이의 30%까지 크기 조정 */
-    width: auto; /* 비율 유지 */
-    height: auto; /* 비율 유지 */
-}
-.journey-header-left{
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 5px;
-}
-.journey-header-left p{
-  font-size: 13px;
-  margin-left: 5px;
-  margin-top: 10px;
-  font-weight: bold;
-  
-}
-.journey-footer p{
-  font-size: 13px;
-  color: #727AC2
-}
-.journey-footer svg{
-  width: 100px;
-}
-.footer-inner{padding-bottom: 50px;
-  background-color: #f8f8ff;
-border-bottom: #7079CC 3px;}
-.contact {
-  font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-  font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-  color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+      }
+      .journey-footer p{
+        font-size: 13px;
+        color: #727AC2
+      }
+      .journey-footer svg{
+        width: 100px;
+      }
+      .footer-inner{padding-bottom: 50px;
+        background-color: #f8f8ff;
+      border-bottom: #7079CC 3px;}
+      .contact {
+        font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+        font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+        color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
-}
-.contact-icon{
-  align-items: center;
-  display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    gap: 70px;
-    
-}
-.icon-button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
+      }
+      .contact-icon{
+        align-items: center;
+        display: flex;
+          justify-content: center; /* 수평 중앙 정렬 */
+          gap: 70px;
 
-.icon-button img {
-    width: 70px; /* 원하는 크기로 조정 */
-    height: auto;
-}
+      }
+      .icon-button {
+          border: none;
+          background: transparent;
+          cursor: pointer;
+      }
 
-/* 팝업 창 스타일 */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* 배경을 조금 더 어두운 색상으로 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* 팝업이 다른 요소 위에 오도록 설정 */
-}
+      .icon-button img {
+          width: 70px; /* 원하는 크기로 조정 */
+          height: auto;
+      }
 
-/* 팝업 내용 스타일 */
-.popup-content {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 12px; /* 부드러운 테두리 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
-    text-align: center;
-    position: relative;
-    max-width: 400px; /* 최대 너비 설정 (필요에 따라 조정) */
-    width: 90%; /* 너비를 화면에 맞게 조정 */
-    transform: scale(0.9); /* 약간의 확대 효과 추가 */
-    transition: transform 0.3s ease; /* 부드러운 확대 효과 */
-}
+      /* 팝업 창 스타일 */
+      .popup {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.6); /* 배경을 조금 더 어두운 색상으로 */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000; /* 팝업이 다른 요소 위에 오도록 설정 */
+      }
 
-/* 팝업 나타날 때 애니메이션 추가 */
-.popup.show .popup-content {
-    transform: scale(1); /* 확대 효과 적용 */
-}
+      /* 팝업 내용 스타일 */
+      .popup-content {
+          background: #fff;
+          padding: 2rem;
+          border-radius: 12px; /* 부드러운 테두리 */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+          text-align: center;
+          position: relative;
+          max-width: 400px; /* 최대 너비 설정 (필요에 따라 조정) */
+          width: 90%; /* 너비를 화면에 맞게 조정 */
+          transform: scale(0.9); /* 약간의 확대 효과 추가 */
+          transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+      }
 
-/* 닫기 버튼 스타일 */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #333; /* 텍스트 색상 조정 */
-    cursor: pointer;
-    transition: color 0.3s ease; /* 부드러운 색상 전환 */
-}
+      /* 팝업 나타날 때 애니메이션 추가 */
+      .popup.show .popup-content {
+          transform: scale(1); /* 확대 효과 적용 */
+      }
 
-.close-btn:hover {
-    color: #ff6f61; /* 호버 시 색상 변경 */
-}
+      /* 닫기 버튼 스타일 */
+      .close-btn {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 1.5rem;
+          color: #333; /* 텍스트 색상 조정 */
+          cursor: pointer;
+          transition: color 0.3s ease; /* 부드러운 색상 전환 */
+      }
 
-/* 전화번호 텍스트 스타일 */
-.popup-content p {
-    margin: 0; /* 텍스트 주위의 기본 마진 제거 */
-    padding-top: 20px; /* 닫기 버튼과의 간격 조정 */
-    font-size: 1.2rem; /* 텍스트 크기 조정 */
-    color: #333; /* 텍스트 색상 조정 */
-}
+      .close-btn:hover {
+          color: #ff6f61; /* 호버 시 색상 변경 */
+      }
 
-/* 복사하기 버튼 스타일 */
-.copy-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff; /* 버튼 색상 */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* 버튼 색상 전환 효과 */
-}
+      /* 전화번호 텍스트 스타일 */
+      .popup-content p {
+          margin: 0; /* 텍스트 주위의 기본 마진 제거 */
+          padding-top: 20px; /* 닫기 버튼과의 간격 조정 */
+          font-size: 1.2rem; /* 텍스트 크기 조정 */
+          color: #333; /* 텍스트 색상 조정 */
+      }
 
-.copy-btn:hover {
-    background-color: #0056b3; /* 호버 시 버튼 색상 변경 */
-}
+      /* 복사하기 버튼 스타일 */
+      .copy-btn {
+          margin-top: 15px;
+          padding: 10px 20px;
+          font-size: 1rem;
+          color: #fff;
+          background-color: #007bff; /* 버튼 색상 */
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease; /* 버튼 색상 전환 효과 */
+      }
 
-/* 숨김 클래스 */
-.hidden {
-    display: none;
-}
+      .copy-btn:hover {
+          background-color: #0056b3; /* 호버 시 버튼 색상 변경 */
+      }
 
-
+      /* 숨김 클래스 */
+      .hidden {
+          display: none;
+      }
     </style>
-    
-
-    
   </head>
   <body>
     <div class="wrap">
@@ -1007,454 +1002,571 @@ border-bottom: #7079CC 3px;}
       <!-- journey 영역 -->
       <section id="journey">
         <div class="journey-wrap">
-        <!-- journey 영역 꾸미기 -->
-        <div class="journey-journey"><p>Jouney</p></div>
-        <div class="journey-cards">
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-header-left">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z" fill="black"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z" fill="black"/>
-                </svg>
-                
-              </svg>
-              <p>jo_ng_ho_on</p>
-            </div>
-
-            <div class="jouney-header-right">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="journey-main">
-            <video src="/video/박종훈_405호_adddrama.mp4" autoplay muted controls></video>
-          </div>
-          <div class="journey-footer">
-            <svg
-              width="150"
-              height="40"
-              viewBox="0 0 150 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_13_44)">
-                <path
-                  d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
-                  stroke="black"
-                  stroke-width="3"
-                />
-              </g>
-              <g clip-path="url(#clip1_13_44)">
-                <path
-                  d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
-                  fill="black"
-                />
-              </g>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
-                fill="black"
-              />
-              <defs>
-                <clipPath id="clip0_13_44">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_13_44">
-                  <rect
+          <!-- journey 영역 꾸미기 -->
+          <div class="journey-journey"><p>Jouney</p></div>
+          <div class="journey-cards">
+            <div class="journey-card">
+              <div class="journey-header">
+                <div class="journey-header-left">
+                  <svg
                     width="40"
                     height="40"
-                    fill="white"
-                    transform="translate(55)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-            <p># 100s 라이브  # 에프터이팩트</p>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-header-left">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z" fill="black"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z" fill="black"/>
-                </svg>
-                
-              </svg>
-              <p>jo_ng_ho_on</p>
-            </div>
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z"
+                      fill="black"
+                    />
+                  </svg>
 
-            <div class="jouney-header-right">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="journey-main">
-            <video src="/video/박종훈_405호_adddrama.mp4" autoplay muted controls></video>
-          </div>
-          <div class="journey-footer">
-            <svg
-              width="150"
-              height="40"
-              viewBox="0 0 150 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_13_44)">
-                <path
-                  d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
-                  stroke="black"
-                  stroke-width="3"
-                />
-              </g>
-              <g clip-path="url(#clip1_13_44)">
-                <path
-                  d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
-                  fill="black"
-                />
-              </g>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
-                fill="black"
-              />
-              <defs>
-                <clipPath id="clip0_13_44">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_13_44">
-                  <rect
+                  <p>jo_ng_ho_on</p>
+                </div>
+
+                <div class="jouney-header-right">
+                  <svg
                     width="40"
                     height="40"
-                    fill="white"
-                    transform="translate(55)"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="journey-main">
+                <video
+                  src="/video/박종훈_405호_adddrama.mp4"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+              </div>
+              <div class="journey-footer">
+                <svg
+                  width="150"
+                  height="40"
+                  viewBox="0 0 150 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_13_44)">
+                    <path
+                      d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
+                      stroke="black"
+                      stroke-width="3"
+                    />
+                  </g>
+                  <g clip-path="url(#clip1_13_44)">
+                    <path
+                      d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
+                      fill="black"
+                    />
+                  </g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
+                    fill="black"
                   />
-                </clipPath>
-              </defs>
-            </svg>
-            <p># 반응형 자막 # 에프터이팩트 # 프리미어프로</p>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-header-left">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z" fill="black"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z" fill="black"/>
+                  <defs>
+                    <clipPath id="clip0_13_44">
+                      <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_13_44">
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="white"
+                        transform="translate(55)"
+                      />
+                    </clipPath>
+                  </defs>
                 </svg>
-                
-              </svg>
-              <p>jo_ng_ho_on</p>
+                <p># 100s 라이브 # 에프터이팩트</p>
+              </div>
             </div>
-
-            <div class="jouney-header-right">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="journey-main">
-            <video src="/video/박종훈_405호_adddrama.mp4" autoplay muted controls></video>
-          </div>
-          <div class="journey-footer">
-            <svg
-              width="150"
-              height="40"
-              viewBox="0 0 150 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_13_44)">
-                <path
-                  d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
-                  stroke="black"
-                  stroke-width="3"
-                />
-              </g>
-              <g clip-path="url(#clip1_13_44)">
-                <path
-                  d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
-                  fill="black"
-                />
-              </g>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
-                fill="black"
-              />
-              <defs>
-                <clipPath id="clip0_13_44">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_13_44">
-                  <rect
+            <div class="journey-card">
+              <div class="journey-header">
+                <div class="journey-header-left">
+                  <svg
                     width="40"
                     height="40"
-                    fill="white"
-                    transform="translate(55)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-            <p># YTN banner  # 에프터이팩트</p>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-header-left">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z" fill="black"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z" fill="black"/>
-                </svg>
-                
-              <p>jo_ng_ho_on</p>
-            </div>
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <p>jo_ng_ho_on</p>
+                </div>
 
-            <div class="jouney-header-right">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="journey-main">
-            <video src="/video/박종훈_405호_adddrama.mp4" autoplay muted controls></video>
-          </div>
-          <div class="journey-footer">
-            <svg
-              width="150"
-              height="40"
-              viewBox="0 0 150 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_13_44)">
-                <path
-                  d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
-                  stroke="black"
-                  stroke-width="3"
-                />
-              </g>
-              <g clip-path="url(#clip1_13_44)">
-                <path
-                  d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
-                  fill="black"
-                />
-              </g>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
-                fill="black"
-              />
-              <defs>
-                <clipPath id="clip0_13_44">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_13_44">
-                  <rect
+                <div class="jouney-header-right">
+                  <svg
                     width="40"
                     height="40"
-                    fill="white"
-                    transform="translate(55)"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="journey-main">
+                <video
+                  src="/video/박종훈_405호_adddrama.mp4"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+              </div>
+              <div class="journey-footer">
+                <svg
+                  width="150"
+                  height="40"
+                  viewBox="0 0 150 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_13_44)">
+                    <path
+                      d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
+                      stroke="black"
+                      stroke-width="3"
+                    />
+                  </g>
+                  <g clip-path="url(#clip1_13_44)">
+                    <path
+                      d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
+                      fill="black"
+                    />
+                  </g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
+                    fill="black"
                   />
-                </clipPath>
-              </defs>
-            </svg>
-            <p># move rec  # 에프터이팩트</p>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-header-left">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z" fill="black"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z" fill="black"/>
+                  <defs>
+                    <clipPath id="clip0_13_44">
+                      <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_13_44">
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="white"
+                        transform="translate(55)"
+                      />
+                    </clipPath>
+                  </defs>
                 </svg>
-                
-              </svg>
-              <p>jo_ng_ho_on</p>
+                <p># 반응형 자막 # 에프터이팩트 # 프리미어프로</p>
+              </div>
             </div>
-
-            <div class="jouney-header-right">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="journey-main">
-            <video src="/video/박종훈_405호_adddrama.mp4" autoplay muted controls></video>
-          </div>
-          <div class="journey-footer">
-            <svg
-              width="150"
-              height="40"
-              viewBox="0 0 150 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_13_44)">
-                <path
-                  d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
-                  stroke="black"
-                  stroke-width="3"
-                />
-              </g>
-              <g clip-path="url(#clip1_13_44)">
-                <path
-                  d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
-                  fill="black"
-                />
-              </g>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
-                fill="black"
-              />
-              <defs>
-                <clipPath id="clip0_13_44">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_13_44">
-                  <rect
+            <div class="journey-card">
+              <div class="journey-header">
+                <div class="journey-header-left">
+                  <svg
                     width="40"
                     height="40"
-                    fill="white"
-                    transform="translate(55)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-            <p># DICE  # 에프터이팩트</p>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-header-left">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z" fill="black"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z" fill="black"/>
-                </svg>
-                
-              </svg>
-              <p>jo_ng_ho_on</p>
-            </div>
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <p>jo_ng_ho_on</p>
+                </div>
 
-            <div class="jouney-header-right">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="journey-main">
-            <video src="/video/박종훈_405호_adddrama.mp4" autoplay muted controls></video>
-          </div>
-          <div class="journey-footer">
-            <svg
-              width="150"
-              height="40"
-              viewBox="0 0 150 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_13_44)">
-                <path
-                  d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
-                  stroke="black"
-                  stroke-width="3"
-                />
-              </g>
-              <g clip-path="url(#clip1_13_44)">
-                <path
-                  d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
-                  fill="black"
-                />
-              </g>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
-                fill="black"
-              />
-              <defs>
-                <clipPath id="clip0_13_44">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_13_44">
-                  <rect
+                <div class="jouney-header-right">
+                  <svg
                     width="40"
                     height="40"
-                    fill="white"
-                    transform="translate(55)"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="journey-main">
+                <video
+                  src="/video/박종훈_405호_adddrama.mp4"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+              </div>
+              <div class="journey-footer">
+                <svg
+                  width="150"
+                  height="40"
+                  viewBox="0 0 150 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_13_44)">
+                    <path
+                      d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
+                      stroke="black"
+                      stroke-width="3"
+                    />
+                  </g>
+                  <g clip-path="url(#clip1_13_44)">
+                    <path
+                      d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
+                      fill="black"
+                    />
+                  </g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
+                    fill="black"
                   />
-                </clipPath>
-              </defs>
-            </svg>
-            <p># 타이포그래피  # 에프터이팩트</p>
+                  <defs>
+                    <clipPath id="clip0_13_44">
+                      <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_13_44">
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="white"
+                        transform="translate(55)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p># YTN banner # 에프터이팩트</p>
+              </div>
+            </div>
+            <div class="journey-card">
+              <div class="journey-header">
+                <div class="journey-header-left">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <p>jo_ng_ho_on</p>
+                </div>
+
+                <div class="jouney-header-right">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="journey-main">
+                <video
+                  src="/video/박종훈_405호_adddrama.mp4"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+              </div>
+              <div class="journey-footer">
+                <svg
+                  width="150"
+                  height="40"
+                  viewBox="0 0 150 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_13_44)">
+                    <path
+                      d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
+                      stroke="black"
+                      stroke-width="3"
+                    />
+                  </g>
+                  <g clip-path="url(#clip1_13_44)">
+                    <path
+                      d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
+                      fill="black"
+                    />
+                  </g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
+                    fill="black"
+                  />
+                  <defs>
+                    <clipPath id="clip0_13_44">
+                      <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_13_44">
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="white"
+                        transform="translate(55)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p># move rec # 에프터이팩트</p>
+              </div>
+            </div>
+            <div class="journey-card">
+              <div class="journey-header">
+                <div class="journey-header-left">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <p>jo_ng_ho_on</p>
+                </div>
+
+                <div class="jouney-header-right">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="journey-main">
+                <video
+                  src="/video/박종훈_405호_adddrama.mp4"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+              </div>
+              <div class="journey-footer">
+                <svg
+                  width="150"
+                  height="40"
+                  viewBox="0 0 150 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_13_44)">
+                    <path
+                      d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
+                      stroke="black"
+                      stroke-width="3"
+                    />
+                  </g>
+                  <g clip-path="url(#clip1_13_44)">
+                    <path
+                      d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
+                      fill="black"
+                    />
+                  </g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
+                    fill="black"
+                  />
+                  <defs>
+                    <clipPath id="clip0_13_44">
+                      <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_13_44">
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="white"
+                        transform="translate(55)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p># DICE # 에프터이팩트</p>
+              </div>
+            </div>
+            <div class="journey-card">
+              <div class="journey-header">
+                <div class="journey-header-left">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.6667 15.0002C26.6667 16.7683 25.9643 18.464 24.7141 19.7142C23.4638 20.9645 21.7681 21.6668 20 21.6668C18.2319 21.6668 16.5362 20.9645 15.286 19.7142C14.0357 18.464 13.3333 16.7683 13.3333 15.0002C13.3333 13.2321 14.0357 11.5364 15.286 10.2861C16.5362 9.03587 18.2319 8.3335 20 8.3335C21.7681 8.3335 23.4638 9.03587 24.7141 10.2861C25.9643 11.5364 26.6667 13.2321 26.6667 15.0002ZM23.3333 15.0002C23.3333 15.8842 22.9822 16.7321 22.357 17.3572C21.7319 17.9823 20.8841 18.3335 20 18.3335C19.116 18.3335 18.2681 17.9823 17.643 17.3572C17.0179 16.7321 16.6667 15.8842 16.6667 15.0002C16.6667 14.1161 17.0179 13.2683 17.643 12.6431C18.2681 12.018 19.116 11.6668 20 11.6668C20.8841 11.6668 21.7319 12.018 22.357 12.6431C22.9822 13.2683 23.3333 14.1161 23.3333 15.0002Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1.66675C9.875 1.66675 1.66667 9.87508 1.66667 20.0001C1.66667 30.1251 9.875 38.3334 20 38.3334C30.125 38.3334 38.3333 30.1251 38.3333 20.0001C38.3333 9.87508 30.125 1.66675 20 1.66675ZM5 20.0001C5 23.4834 6.18834 26.6901 8.18 29.2367C9.57907 27.4003 11.3836 25.912 13.4527 24.888C15.5219 23.8639 17.7997 23.3319 20.1083 23.3334C22.3873 23.3308 24.6368 23.8486 26.6852 24.8474C28.7337 25.8462 30.5269 27.2996 31.9283 29.0967C33.3724 27.2027 34.3447 24.9921 34.7648 22.6477C35.1849 20.3034 35.0407 17.8926 34.3442 15.6151C33.6476 13.3375 32.4187 11.2585 30.7591 9.55014C29.0996 7.84179 27.0571 6.55318 24.8006 5.79093C22.5442 5.02868 20.1387 4.8147 17.7831 5.1667C15.4275 5.5187 13.1897 6.42657 11.2546 7.81517C9.31958 9.20377 7.74302 11.0332 6.65539 13.1521C5.56775 15.2709 5.00031 17.6184 5 20.0001ZM20 35.0001C16.5565 35.0057 13.2169 33.821 10.5467 31.6467C11.6214 30.1078 13.052 28.8513 14.7168 27.9842C16.3816 27.1171 18.2313 26.6651 20.1083 26.6667C21.962 26.6651 23.7892 27.1058 25.4383 27.9523C27.0874 28.7987 28.5107 30.0264 29.59 31.5334C26.8991 33.7784 23.5044 35.0056 20 35.0001Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <p>jo_ng_ho_on</p>
+                </div>
+
+                <div class="jouney-header-right">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 17.5C6.125 17.5 5 18.625 5 20C5 21.375 6.125 22.5 7.5 22.5C8.875 22.5 10 21.375 10 20C10 18.625 8.875 17.5 7.5 17.5ZM32.5 17.5C31.125 17.5 30 18.625 30 20C30 21.375 31.125 22.5 32.5 22.5C33.875 22.5 35 21.375 35 20C35 18.625 33.875 17.5 32.5 17.5ZM20 17.5C18.625 17.5 17.5 18.625 17.5 20C17.5 21.375 18.625 22.5 20 22.5C21.375 22.5 22.5 21.375 22.5 20C22.5 18.625 21.375 17.5 20 17.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="journey-main">
+                <video
+                  src="/video/박종훈_405호_adddrama.mp4"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+              </div>
+              <div class="journey-footer">
+                <svg
+                  width="150"
+                  height="40"
+                  viewBox="0 0 150 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_13_44)">
+                    <path
+                      d="M18.1565 37.0578L18.1544 37.0558C12.977 31.9388 8.79379 27.7955 5.88753 23.9202C3.00066 20.0707 1.5 16.6456 1.5 12.9891C1.5 6.95949 5.78569 2.5 11 2.5C13.9764 2.5 16.8977 4.01893 18.8215 6.46206L20 7.95862L21.1785 6.46206C23.1023 4.01893 26.0236 2.5 29 2.5C34.2143 2.5 38.5 6.95949 38.5 12.9891C38.5 16.6456 36.9993 20.0707 34.1125 23.9202C31.2062 27.7955 27.023 31.9388 21.8456 37.0558L21.8435 37.0578L20 38.8869L18.1565 37.0578Z"
+                      stroke="black"
+                      stroke-width="3"
+                    />
+                  </g>
+                  <g clip-path="url(#clip1_13_44)">
+                    <path
+                      d="M85.6667 36L86.0853 34.7333L85.504 34.5413L84.9787 34.8587L85.6667 36ZM91 30.6667L89.8773 29.9467L89.5333 30.4853L89.736 31.088L91 30.6667ZM93.6667 38.64L93.248 39.9093C93.4831 39.9871 93.7352 39.9979 93.9761 39.9404C94.217 39.883 94.4372 39.7596 94.6119 39.5841C94.7866 39.4085 94.9089 39.1878 94.9652 38.9467C95.0215 38.7055 95.0096 38.4534 94.9307 38.2187L93.6667 38.64ZM84.9787 34.8587C82.4293 36.392 78.352 37.3093 75 37.3093V39.976C78.6933 39.976 83.2827 38.9893 86.3547 37.1413L84.9787 34.8587ZM75 37.3067C65.4267 37.3067 57.6667 29.552 57.6667 19.984H55C55.0028 25.2865 57.1112 30.3708 60.8616 34.1192C64.6121 37.8677 69.6975 39.9733 75 39.9733V37.3067ZM57.6667 19.984C57.6702 15.3892 59.4979 10.9865 62.7482 7.73877C65.9984 4.49102 70.4052 2.66667 75 2.66667V0C69.698 -1.17823e-06 64.6129 2.10531 60.8626 5.85315C57.1122 9.60099 55.0035 14.682 55 19.984H57.6667ZM75 2.66667C84.5733 2.66667 92.3333 10.4213 92.3333 19.9867H95C94.9965 14.6846 92.8878 9.60099 89.1374 5.85315C85.3871 2.10531 80.302 -1.17823e-06 75 0V2.66667ZM92.3333 19.9867C92.3333 23.536 91.544 27.3413 89.8773 29.9467L92.1227 31.3867C94.1627 28.2 95 23.832 95 19.9867H92.3333ZM85.248 37.2667L93.248 39.9093L94.0853 37.376L86.0853 34.736L85.248 37.2667ZM94.9307 38.2187L92.264 30.2453L89.736 31.088L92.4027 39.064L94.9307 38.2187Z"
+                      fill="black"
+                    />
+                  </g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M147.42 5.91518C147.517 5.59085 147.525 5.24619 147.442 4.91782C147.36 4.58944 147.19 4.28961 146.95 4.05015C146.711 3.8107 146.411 3.64056 146.082 3.55781C145.754 3.47507 145.409 3.4828 145.085 3.58018L113.835 12.9552C113.49 13.0591 113.182 13.2605 112.948 13.5352C112.714 13.8099 112.564 14.1461 112.517 14.5037C112.469 14.8613 112.526 15.2249 112.68 15.5511C112.834 15.8773 113.079 16.1521 113.385 16.3427L124.88 23.4752L120.553 27.8002C120.373 27.9731 120.23 28.1799 120.132 28.4086C120.034 28.6373 119.982 28.8833 119.98 29.1323C119.977 29.3812 120.025 29.6282 120.119 29.8586C120.213 30.0891 120.352 30.2985 120.528 30.4747C120.704 30.6508 120.913 30.7901 121.144 30.8845C121.374 30.9789 121.621 31.0264 121.87 31.0244C122.119 31.0223 122.365 30.9707 122.594 30.8726C122.823 30.7744 123.03 30.6317 123.203 30.4527L127.53 26.1277L134.66 37.6152C134.851 37.9215 135.125 38.1663 135.452 38.3203C135.778 38.4743 136.141 38.5309 136.499 38.4834C136.857 38.4359 137.193 38.2863 137.468 38.0525C137.742 37.8187 137.944 37.5106 138.048 37.1652L147.42 5.91518ZM130.253 23.4002L135.65 32.1002L141.693 11.9602L130.253 23.4002ZM139.04 9.30768L118.9 15.3502L127.6 20.7502L139.04 9.30768Z"
+                    fill="black"
+                  />
+                  <defs>
+                    <clipPath id="clip0_13_44">
+                      <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_13_44">
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="white"
+                        transform="translate(55)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p># 타이포그래피 # 에프터이팩트</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
       </section>
 
       <!-- contact 영역 -->
@@ -1464,16 +1576,23 @@ border-bottom: #7079CC 3px;}
           <div class="contact"><p>Contact</p></div>
           <div class="contact-icon">
             <button id="phoneIcon" class="icon-button">
-              <img src="images/gg_phone.png" alt="전화 아이콘">
+              <img src="images/gg_phone.png" alt="전화 아이콘" />
             </button>
             <button id="emailIcon" class="icon-button">
-              <img src="images/material-symbols_mail-outline.png" alt="이메일 아이콘">
+              <img
+                src="images/material-symbols_mail-outline.png"
+                alt="이메일 아이콘"
+              />
             </button>
-            
-            <a href="https://www.instagram.com/nuooooh/?next=%2F" target="_blank">
-            <img src="images/lets-icons_insta.png" alt="a" /></a>
+
+            <a
+              href="https://www.instagram.com/nuooooh/?next=%2F"
+              target="_blank"
+            >
+              <img src="images/lets-icons_insta.png" alt="a"
+            /></a>
           </div>
-          
+
           <!-- 전화번호 팝업 -->
           <div id="phonePopup" class="popup hidden">
             <div class="popup-content">
@@ -1482,7 +1601,7 @@ border-bottom: #7079CC 3px;}
               <button id="copyPhoneBtn" class="copy-btn">복사하기</button>
             </div>
           </div>
-          
+
           <!-- 이메일 팝업 -->
           <div id="emailPopup" class="popup hidden">
             <div class="popup-content">
@@ -1491,11 +1610,6 @@ border-bottom: #7079CC 3px;}
               <button id="copyEmailBtn" class="copy-btn">복사하기</button>
             </div>
           </div>
-
-            
-
-            </div>
-        </div>
         </div>
       </footer>
     </div>
