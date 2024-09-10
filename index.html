@@ -6,453 +6,465 @@
     <title>박종훈</title>
     <script src="/js/script.js"></script>
     <style>
-      * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-      list-style: none;
-      }
-      html,
-      body {
-      scroll-behavior: smooth;
-      }
-      .wrap {
-      width: 1200px;
-      margin: 0 auto;
-      }
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            }
+            html,
+            body {
+            scroll-behavior: smooth;
+            }
+            .wrap {
+            width: 1200px;
+            margin: 0 auto;
+            }
 
-      .header {
-      position: fixed;
-      top: 0;
-      z-index: 100000;
-      background-color: #ffffff;
-      width: 1200px;
-      display: flex; /* 플렉스 박스를 사용하여 가로 배치 */
-      justify-content: space-between; /* 양 끝으로 배치 */
-      align-items: center; /* 수직 중앙 정렬 */
-      padding: 50px 30px; /* 위아래 여백 20px, 좌우 여백 20px */
-      background-color: #f8f9fa; /* 헤더 배경색 */
-      border-bottom: 3px solid #7079cc; /* 헤더 하단 테두리 */
-      }
-              /* 헤더의 높이 설정 */
-              .header-height {
-              height: 60px; /* 헤더의 높이 (원하는 값으로 조정) */
+            .header {
+            position: fixed;
+            top: 0;
+            z-index: 100000;
+            background-color: #ffffff;
+            width: 1200px;
+            display: flex; /* 플렉스 박스를 사용하여 가로 배치 */
+            justify-content: space-between; /* 양 끝으로 배치 */
+            align-items: center; /* 수직 중앙 정렬 */
+            padding: 50px 30px; /* 위아래 여백 20px, 좌우 여백 20px */
+            background-color: #f8f9fa; /* 헤더 배경색 */
+            border-bottom: 3px solid #7079cc; /* 헤더 하단 테두리 */
+            }
+                    /* 헤더의 높이 설정 */
+                    .header-height {
+                    height: 60px; /* 헤더의 높이 (원하는 값으로 조정) */
+                    }
+                    .logo {
+                    position: relative;
+                    font-size: 50px;
+                    color: #7079cc;
+                    }
+                    .logo span {
+                    font-weight: bold; /* 텍스트 굵기 조정 */
+                    }
+                    .logo .highlight {
+                    color: #313768; /
+                    }
+                    .logo span:not(.highlight) {
+                    color: #7079cc;
+                    }
+                    .navi {
+                    display: flex;
+                    gap: 15px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    }
+                    .header .navi li a {
+                    color: #7079cc;
+                    }
+                    .header .navi li {
+                    padding: 10px 20px; /* 패딩 조정 */
+                    margin: 5px; /* 마진 조정 */
+                    border-radius: 15px; /* 모서리 둥글게 */
+                    }
+                    .header .navi li.nav-item-about {
+                    background-color: #dadeff; /* 예시 배경색 */
+                    }
+                    .header .navi li.nav-item-project {
+                    background-color: #dadeff; /* 예시 배경색 */
+                    }
+                    .header .navi li.nav-item-journey {
+                    background-color: #dadeff; /* 예시 배경색 */
+                    }
+                    .header .navi li.nav-item-contact {
+                    background-color: #dadeff; /* 예시 배경색 */
+                    }
+                    section {
+                    position: relative;
+                    width: 100%;
+                    /* background-color: #ddd; */
+                    }
+              section span {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
               }
-              .logo {
-              position: relative;
-              font-size: 50px;
-              color: #7079cc;
+              #home {
+              padding-top: 150px; /* 헤더의 높이만큼 여백 추가 */
+              width: 100%;
+              background-color: #f8f8ff; /* 배경색 설정 (필요에 따라 조정) */
+              height: 100%;
+              padding-bottom: 200px;
+              border-bottom: 3px solid #7079CC;
               }
-              .logo span {
-              font-weight: bold; /* 텍스트 굵기 조정 */
+
+              .home-video {
+              width: 90%; /* 비디오 컨테이너의 가로 너비를 전체 너비의 80%로 설정 */
+              max-width: 1200px; /* 비디오의 최대 너비를 1200px로 설정 */
+              margin: 0 auto; /* 비디오를 중앙 정렬 */
+              padding-top: 20px; /* 비디오 위에 패딩 추가 */
+              box-sizing: border-box; /* 패딩과 테두리를 포함하여 전체 너비와 높이 계산 */
+              margin-bottom: 200px;
               }
-              .logo .highlight {
-              color: #313768; /
+              .home-video video {
+              width: 100%; /* 비디오의 너비를 컨테이너의 너비에 맞춤 */
+              height: auto; /* 비디오의 높이를 자동으로 조정하여 비율 유지 */
+              display: block; /* 블록 요소로 설정하여 여백 제거 */
               }
-              .logo span:not(.highlight) {
-              color: #7079cc;
-              }
-              .navi {
-              display: flex;
-              gap: 15px;
-              font-size: 15px;
-              font-weight: bold;
-              }
-              .header .navi li a {
-              color: #7079cc;
-              }
-              .header .navi li {
-              padding: 10px 20px; /* 패딩 조정 */
-              margin: 5px; /* 마진 조정 */
-              border-radius: 15px; /* 모서리 둥글게 */
-              }
-              .header .navi li.nav-item-about {
-              background-color: #dadeff; /* 예시 배경색 */
-              }
-              .header .navi li.nav-item-project {
-              background-color: #dadeff; /* 예시 배경색 */
-              }
-              .header .navi li.nav-item-journey {
-              background-color: #dadeff; /* 예시 배경색 */
-              }
-              .header .navi li.nav-item-contact {
-              background-color: #dadeff; /* 예시 배경색 */
-              }
-              section {
+              .footer {
               position: relative;
               width: 100%;
-              /* background-color: #ddd; */
+              height: 200px;
               }
-        section span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        }
-        #home {
-        padding-top: 150px; /* 헤더의 높이만큼 여백 추가 */
-        width: 100%;
-        background-color: #f8f8ff; /* 배경색 설정 (필요에 따라 조정) */
-        height: 100%;
-        padding-bottom: 200px;
-        border-bottom: 3px solid #7079CC;
-        }
+              .home-main p {
+              text-align: center; /* 텍스트를 중앙 정렬 */
+              font-size: 20px; /* 글자 크기 (필요에 따라 조정) */
+              line-height: 1.5; /* 줄 높이 (필요에 따라 조정) */
+              color: #7079CC;
+              font-weight: 500;
+              }
+              .about-wrap{
+              background-color: #ffffff;
+              position: relative; /* 상대 위치로 설정 */
+              z-index: 100;
+              padding-bottom: 150px;
+              border-bottom: 3px solid #7079cc;
+              }
+              .about-about{
+              padding-top: 50px;
+              padding-bottom: 100px;
+              }
+              .about-about p {
+              font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+              font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+              color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+              text-align: center;
+              }
+              .about-main{
+              display: flex;
+              align-items: center; /* 수직 중앙 정렬 */
+              justify-content: center; /* 수평 중앙 정렬 */
+              gap: 10px; /* 자식 요소들 사이의 간격 설정 */
+              }
+              .about-img img{
+              margin-left: 100px;
+              margin-right: 30px;
+              width: 200px;
+              border-radius: 112.5px;
+              }
+              .about-name {
+              display: flex;
+              gap: 50px; /* 두 섹션 간의 간격 */
+              margin-left: 100px;
+              }
+              .about-name-1, .about-name2 {
+                display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1px; 
+              }
+              .about-name-1,
+.about-name-2 {
+  min-height: 200px; /* 원하는 높이로 조정 */
+}
 
-        .home-video {
-        width: 90%; /* 비디오 컨테이너의 가로 너비를 전체 너비의 80%로 설정 */
-        max-width: 1200px; /* 비디오의 최대 너비를 1200px로 설정 */
-        margin: 0 auto; /* 비디오를 중앙 정렬 */
-        padding-top: 20px; /* 비디오 위에 패딩 추가 */
-        box-sizing: border-box; /* 패딩과 테두리를 포함하여 전체 너비와 높이 계산 */
-        margin-bottom: 200px;
-        }
-        .home-video video {
-        width: 100%; /* 비디오의 너비를 컨테이너의 너비에 맞춤 */
-        height: auto; /* 비디오의 높이를 자동으로 조정하여 비율 유지 */
-        display: block; /* 블록 요소로 설정하여 여백 제거 */
-        }
-        .footer {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        }
-        .home-main p {
-        text-align: center; /* 텍스트를 중앙 정렬 */
-        font-size: 20px; /* 글자 크기 (필요에 따라 조정) */
-        line-height: 1.5; /* 줄 높이 (필요에 따라 조정) */
-        color: #7079CC;
-        font-weight: 500;
-        }
-        .about-wrap{
-        background-color: #ffffff;
-        position: relative; /* 상대 위치로 설정 */
-        z-index: 100;
-        padding-bottom: 150px;
-        border-bottom: 3px solid #7079cc;
-        }
-        .about-about{
-        padding-top: 50px;
-        padding-bottom: 100px;
-        }
-        .about-about p {
-        font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-        font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-        color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-        text-align: center;
-        }
-        .about-main{
-        display: flex;
-        align-items: center; /* 수직 중앙 정렬 */
-        justify-content: center; /* 수평 중앙 정렬 */
-        gap: 20px; /* 자식 요소들 사이의 간격 설정 */
-        }
-        .about-img img{
-        margin-left: 100px;
-        margin-right: 30px;
-        width: 200px;
-        border-radius: 112.5px;
-        }
-        .about-name {
-        display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
-        gap: 5px; /* 두 섹션 간의 간격 */
-        margin-left: 100px;
-        }
-        .about-name-1, .about-name2 {
-        display: flex;
-        flex-direction: column;
-        }
-        .about-footer{
-        text-align: center;
-        font-size: 15px;
-        font-weight: 500;
-        margin: 100px;
-        }
-        .about-circle{
-        display: flex;
-        align-items: center;
-        gap: 200px;
-        }
-        .about-circle1{
-        width: 500px; /* 컨테이너의 너비를 50px로 설정 */
-        height: 500px; /* 컨테이너의 높이를 50px로 설정 */
-        overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
-        }
-        .about-circle1 svg{
-        width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
-        height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
-        }
-        .about-circle2{
-        width: 500px; /* 컨테이너의 너비를 50px로 설정 */
-        height: 500px; /* 컨테이너의 높이를 50px로 설정 */
-        overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
-        }
-        .about-circle2 svg{
-        width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
-        height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
-        }
-        .project-wrap{
-        position: relative;
-        z-index: 99;
-        padding-top: 50px;
-        padding-bottom: 100px;
-        background-color: #F8F8FF;
-        }
-        .project-project{
-        font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-        font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-        color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-        text-align: center;
-        }
-        .project-card-point{
-        background-color: #fbfbfb;
-        display: flex;
-        width: 80%; /* 원하는 너비로 설정, 예: 80% */
-        max-width: 1200px; /* 최대 너비를 설정, 옵션 */
-        margin: 0 auto; /* 가운데 정렬 (수평 방향) */
-        margin-top: 150px;
-        padding: 40px;
-        border-radius: 25px;
-        background-color: #ffffff;
-        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
-        justify-content: space-between;
-        }
-        .project-card-left{
-        margin-right: 20px;
-        }
-        .project-card-video {
-        width: 100%; /* 부모 컨테이너에 맞게 조절 */
-        max-width: 500px; /* 비디오의 최대 너비를 설정 */
-        height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
-        }
-        .project-card-video video {
-        width: 100%; /* 부모 컨테이너에 맞게 비디오의 너비를 조절 */
-        height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
-        border-radius: 25px;
-        }
-        .project-card-link{
-        text-align: center;
-        background-color: #7079cc;
-        color: #ddd;
-        border-radius: 30px;
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        }
-        .project-card-right{
-        font-weight:600;
-        }
-        .link-text {
-        color: #f8f8f8; /* 기본 링크 색상 */
-        text-decoration: none; /* 기본 밑줄 제거 */
-        font-size: 16px; /* 폰트 크기 설정 */
-        font-weight: bold; /* 텍스트 굵기 설정 */
-        }
-        .title {
-        color: #7079cc; /* 색상 변경 */
-        margin-bottom: 10px; /* 각 타이틀 아래에 10px 공백 추가 */
-        }
-        h1 {
-        margin-bottom: 30px; /* 제목 아래에 20px 공백 추가 */
-        }
-        .journey-wrap{
-        width: 1200px; /* 고정 너비 설정 */
-        margin: 0 auto; /* 중앙 정렬 */
-        position: relative;
-        z-index: 98;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        background-color: #ffffff;
-        border-bottom: 3px solid #7079cc;
-        }
+              .label{color: #7079CC;
+              font-weight: bold;
+              margin-right: 20px;}
+              .info-item {
+                display: contents; /* 내용이 부모 그리드 셀에 직접 배치되게 함 */
+      }
+              .about-footer{
+              text-align: center;
+              font-size: 15px;
+              font-weight: 500;
+              margin: 100px;
+              }
+              .about-circle{
+              display: flex;
+              align-items: center;
+              gap: 200px;
+              }
+              .about-circle1{
+              width: 500px; /* 컨테이너의 너비를 50px로 설정 */
+              height: 500px; /* 컨테이너의 높이를 50px로 설정 */
+              overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
+              }
+              .about-circle1 svg{
+              width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
+              height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
+              }
+              .about-circle2{
+              width: 500px; /* 컨테이너의 너비를 50px로 설정 */
+              height: 500px; /* 컨테이너의 높이를 50px로 설정 */
+              overflow: hidden; /* 컨테이너를 넘어가는 SVG 부분을 숨깁니다. */
+              }
+              .about-circle2 svg{
+              width: 100%; /* SVG의 너비를 컨테이너의 너비에 맞춤 */
+              height: 100%; /* SVG의 높이를 컨테이너의 높이에 맞춤 */
+              }
+              .project-wrap{
+              position: relative;
+              z-index: 99;
+              padding-top: 50px;
+              padding-bottom: 100px;
+              background-color: #F8F8FF;
+              }
+              .project-project{
+              font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+              font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+              color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+              text-align: center;
+              }
+              .project-card-point{
+              background-color: #fbfbfb;
+              display: flex;
+              width: 80%; /* 원하는 너비로 설정, 예: 80% */
+              max-width: 1200px; /* 최대 너비를 설정, 옵션 */
+              margin: 0 auto; /* 가운데 정렬 (수평 방향) */
+              margin-top: 150px;
+              padding: 40px;
+              border-radius: 25px;
+              background-color: #ffffff;
+              box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
+              justify-content: space-between;
+              }
+              .project-card-left{
+              margin-right: 20px;
+              }
+              .project-card-video {
+              width: 100%; /* 부모 컨테이너에 맞게 조절 */
+              max-width: 500px; /* 비디오의 최대 너비를 설정 */
+              height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
+              }
+              .project-card-video video {
+              width: 100%; /* 부모 컨테이너에 맞게 비디오의 너비를 조절 */
+              height: auto; /* 비율을 유지하면서 높이를 자동으로 조절 */
+              border-radius: 25px;
+              }
+              .project-card-link{
+              text-align: center;
+              background-color: #7079cc;
+              color: #ddd;
+              border-radius: 30px;
+              margin-top: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              }
+              .project-card-right{
+              font-weight:600;
+              }
+              .link-text {
+              color: #f8f8f8; /* 기본 링크 색상 */
+              text-decoration: none; /* 기본 밑줄 제거 */
+              font-size: 16px; /* 폰트 크기 설정 */
+              font-weight: bold; /* 텍스트 굵기 설정 */
+              }
+              .title {
+              color: #7079cc; /* 색상 변경 */
+              margin-bottom: 10px; /* 각 타이틀 아래에 10px 공백 추가 */
+              }
+              h1 {
+              margin-bottom: 30px; /* 제목 아래에 20px 공백 추가 */
+              }
+              .journey-wrap{
+              width: 1200px; /* 고정 너비 설정 */
+              margin: 0 auto; /* 중앙 정렬 */
+              position: relative;
+              z-index: 98;
+              padding-top: 50px;
+              padding-bottom: 50px;
+              background-color: #ffffff;
+              border-bottom: 3px solid #7079cc;
+              }
 
-        .journey-journey{
-        font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-        font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-        color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 100px;
-        }
-        .journey-cards{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성 */
-        grid-template-rows: repeat(3, auto); /* 행은 자동 크기 조절 */
-        gap: 50px; /* 영역 간의 간격 */
-        /* height: 100vh; 화면 전체 높이 */
-        padding: 10px; /* 컨테이너 내부 여백 */
-        box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
-        }
-        .journey-card {
-        background-color: #f0f0f0;
-        border: 1px solid #ddd;
-        display: flex;
-        font-size: 24px;
-        color: #333;
-        position: relative;
-        }
-        .journey-card{
-        flex-direction: column; /* 세로 방향으로 배치 */
-        width: 330px;
-        height: 500px;
-        background-color: #f5f5f5;}
-        /* 각 영역 설정 */
-        .journey-header {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 15px;
-        }
+              .journey-journey{
+              font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+              font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+              color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+              text-align: center;
+              padding-top: 50px;
+              padding-bottom: 100px;
+              }
+              .journey-cards{
+              display: grid;
+              grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성 */
+              grid-template-rows: repeat(3, auto); /* 행은 자동 크기 조절 */
+              gap: 50px; /* 영역 간의 간격 */
+              /* height: 100vh; 화면 전체 높이 */
+              padding: 10px; /* 컨테이너 내부 여백 */
+              box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
+              }
+              .journey-card {
+              background-color: #f0f0f0;
+              border: 1px solid #ddd;
+              display: flex;
+              font-size: 24px;
+              color: #333;
+              position: relative;
+              }
+              .journey-card{
+              flex-direction: column; /* 세로 방향으로 배치 */
+              width: 330px;
+              height: 500px;
+              background-color: #f5f5f5;}
+              /* 각 영역 설정 */
+              .journey-header {
+              display: flex;
+              justify-content: space-between;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 15px;
+              }
 
-        .journey-main {
-        display: flex;
-        justify-content: center; /* 수평 중앙 정렬 */
-        align-items: center; /* 수직 중앙 정렬 */
-        width: 100%;
-        height: auto; /* 또는 필요한 높이 */
-        background-color: #f0f0f0; /* 배경색 설정 (선택 사항) */
-        }
+              .journey-main {
+              display: flex;
+              justify-content: center; /* 수평 중앙 정렬 */
+              align-items: center; /* 수직 중앙 정렬 */
+              width: 100%;
+              height: auto; /* 또는 필요한 높이 */
+              background-color: #f0f0f0; /* 배경색 설정 (선택 사항) */
+              }
 
-        .journey-footer {
-        padding: 10px;
-        font-size: 90%;
-        padding-top: 15px;
-        margin-left: 10px;
-        }
+              .journey-footer {
+              padding: 10px;
+              font-size: 90%;
+              padding-top: 15px;
+              margin-left: 10px;
+              }
 
-        .journey-card video {
-        max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
-        max-height: 30vh; /* 화면 높이의 30%까지 크기 조정 */
-        width: auto; /* 비율 유지 */
-        height: auto; /* 비율 유지 */
-        }
-        .journey-header-left{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 5px;
-        }
-        .journey-header-left p{
-        font-size: 13px;
-        margin-left: 5px;
-        margin-top: 10px;
-        font-weight: bold;
-        }
+              .journey-card video {
+              max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
+              max-height: 30vh; /* 화면 높이의 30%까지 크기 조정 */
+              width: auto; /* 비율 유지 */
+              height: auto; /* 비율 유지 */
+              }
+              .journey-header-left{
+              display: flex;
+              justify-content: flex-start;
+              margin-left: 5px;
+              }
+              .journey-header-left p{
+              font-size: 13px;
+              margin-left: 5px;
+              margin-top: 10px;
+              font-weight: bold;
+              }
 
-        .journey-footer p{
-        font-size: 13px;
-        color: #727AC2
-        }
-        .journey-footer svg{
-        width: 100px;
-        }
-        .footer-inner{padding-bottom: 50px;
-        background-color: #f8f8ff;
-        border-bottom: #7079CC 3px;}
+              .journey-footer p{
+              font-size: 13px;
+              color: #727AC2
+              }
+              .journey-footer svg{
+              width: 100px;
+              }
+              .footer-inner{padding-bottom: 50px;
+              background-color: #f8f8ff;
+              border-bottom: #7079CC 3px;}
 
-        .contact {
-        font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
-        font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
-        color: #7079cc; /* 글자 색상 설정 (선택 사항) */
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 10px;
-        }
-        .contact-icon{
-        align-items: center;
-        display: flex;
-        justify-content: center; /* 수평 중앙 정렬 */
-        gap: 70px;
-        }
+              .contact {
+              font-size: 40px; /* 글자 크기 설정 (필요에 따라 조정) */
+              font-weight: bold; /* 글자 굵기 설정 (선택 사항) */
+              color: #7079cc; /* 글자 색상 설정 (선택 사항) */
+              text-align: center;
+              padding-top: 50px;
+              padding-bottom: 10px;
+              }
+              .contact-icon{
+              align-items: center;
+              display: flex;
+              justify-content: center; /* 수평 중앙 정렬 */
+              gap: 70px;
+              }
 
-        .icon-button {
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        }
+              .icon-button {
+              border: none;
+              background: transparent;
+              cursor: pointer;
+              }
 
-        .icon-button img {
-        width: 70px; /* 원하는 크기로 조정 */
-        height: auto;
-        }
+              .icon-button img {
+              width: 70px; /* 원하는 크기로 조정 */
+              height: auto;
+              }
 
-        /* 팝업 창 스타일 */
-        .popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6); /* 배경을 조금 더 어두운 색상으로 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000; /* 팝업이 다른 요소 위에 오도록 설정 */
-        }
+              /* 팝업 창 스타일 */
+              .popup {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.6); /* 배경을 조금 더 어두운 색상으로 */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 1000; /* 팝업이 다른 요소 위에 오도록 설정 */
+              }
 
-        /* 팝업 내용 스타일 */
-        .popup-content {
-        background: #fff;
-        padding: 2rem;
-        border-radius: 12px; /* 부드러운 테두리 */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
-        text-align: center;
-        position: relative;
-        max-width: 400px; /* 최대 너비 설정 (필요에 따라 조정) */
-        width: 90%; /* 너비를 화면에 맞게 조정 */
-        transform: scale(0.9); /* 약간의 확대 효과 추가 */
-        transition: transform 0.3s ease; /* 부드러운 확대 효과 */
-        }
+              /* 팝업 내용 스타일 */
+              .popup-content {
+              background: #fff;
+              padding: 2rem;
+              border-radius: 12px; /* 부드러운 테두리 */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+              text-align: center;
+              position: relative;
+              max-width: 400px; /* 최대 너비 설정 (필요에 따라 조정) */
+              width: 90%; /* 너비를 화면에 맞게 조정 */
+              transform: scale(0.9); /* 약간의 확대 효과 추가 */
+              transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+              }
 
-        /* 팝업 나타날 때 애니메이션 추가 */
-        .popup.show .popup-content {
-        transform: scale(1); /* 확대 효과 적용 */
-        }
-        /* 닫기 버튼 스타일 */
+              /* 팝업 나타날 때 애니메이션 추가 */
+              .popup.show .popup-content {
+              transform: scale(1); /* 확대 효과 적용 */
+              }
+              /* 닫기 버튼 스타일 */
 
-        .close-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 1.5rem;
-        color: #333; /* 텍스트 색상 조정 */
-        cursor: pointer;
-        transition: color 0.3s ease; /* 부드러운 색상 전환 */
-        }
+              .close-btn {
+              position: absolute;
+              top: 15px;
+              right: 15px;
+              font-size: 1.5rem;
+              color: #333; /* 텍스트 색상 조정 */
+              cursor: pointer;
+              transition: color 0.3s ease; /* 부드러운 색상 전환 */
+              }
 
-        .close-btn:hover {
-        color: #ff6f61; /* 호버 시 색상 변경 */
-        }
+              .close-btn:hover {
+              color: #ff6f61; /* 호버 시 색상 변경 */
+              }
 
-        /* 전화번호 텍스트 스타일 */
-        .popup-content p {
-        margin: 0; /* 텍스트 주위의 기본 마진 제거 */
-        padding-top: 20px; /* 닫기 버튼과의 간격 조정 */
-        font-size: 1.2rem; /* 텍스트 크기 조정 */
-        color: #333; /* 텍스트 색상 조정 */
-        }
+              /* 전화번호 텍스트 스타일 */
+              .popup-content p {
+              margin: 0; /* 텍스트 주위의 기본 마진 제거 */
+              padding-top: 20px; /* 닫기 버튼과의 간격 조정 */
+              font-size: 1.2rem; /* 텍스트 크기 조정 */
+              color: #333; /* 텍스트 색상 조정 */
+              }
 
-        /* 복사하기 버튼 스타일 */
-        .copy-btn {
-        margin-top: 15px;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: #fff;
-        background-color: #007bff; /* 버튼 색상 */
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* 버튼 색상 전환 효과 */
-        }
+              /* 복사하기 버튼 스타일 */
+              .copy-btn {
+              margin-top: 15px;
+              padding: 10px 20px;
+              font-size: 1rem;
+              color: #fff;
+              background-color: #007bff; /* 버튼 색상 */
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: background-color 0.3s ease; /* 버튼 색상 전환 효과 */
+              }
 
-        .copy-btn:hover {
-        background-color: #0056b3; /* 호버 시 버튼 색상 변경 */
-        }
+              .copy-btn:hover {
+              background-color: #0056b3; /* 호버 시 버튼 색상 변경 */
+              }
 
-        /* 숨김 클래스 */
-        .hidden {
-        display: none;
-        }
+              /* 숨김 클래스 */
+              .hidden {
+              display: none;
+              }
     </style>
   </head>
   <body>
@@ -508,42 +520,42 @@
             <div class="about-name">
               <div class="about-name-1">
                 <div class="info-item">
-                  <div class="label">이름:</div>
+                  <div class="label">이름 :</div>
                   <div class="value">박종훈</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">생년월일:</div>
+                  <div class="label">생년월일 :</div>
                   <div class="value">970828</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">거주지:</div>
+                  <div class="label">거주지 :</div>
                   <div class="value">대구</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">학력/전공:</div>
+                  <div class="label">학력/전공 :</div>
                   <div class="value">대구보건대학교 / 세무회계학 전공</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">학점:</div>
+                  <div class="label">학점 :</div>
                   <div class="value">3.89/4.5</div>
                 </div>
               </div>
 
               <div class="about-name2">
                 <div class="info-item">
-                  <div class="label">성격:</div>
+                  <div class="label">성격 :</div>
                   <div class="value">조용하지만 밝고 성실해요! 🙂</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">취미:</div>
+                  <div class="label">취미 :</div>
                   <div class="value">축구 ⚽ , 영화감상 🎬</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">MBTI:</div>
+                  <div class="label">MBTI :</div>
                   <div class="value">ISFP, INFP</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">병역:</div>
+                  <div class="label">병역 :</div>
                   <div class="value">육군 병장 만기전역🎖️</div>
                 </div>
               </div>
