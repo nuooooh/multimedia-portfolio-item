@@ -319,9 +319,6 @@
     padding: 10px; /* 컨테이너 내부 여백 */
     box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
                                                   }
-                                                .journey-cards{
-                                                  border-bottom: 3px solid #7079cc;
-                                                }
                                                   .journey-card {
                                                     background-color: #f0f0f0;
     border: 1px solid #ddd;
@@ -392,13 +389,14 @@ background-color: #f5f5f5;}
   color: #7079cc; /* 글자 색상 설정 (선택 사항) */
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 .contact-icon{
   align-items: center;
   display: flex;
     justify-content: center; /* 수평 중앙 정렬 */
     gap: 70px;
+    
 }
 .icon-button {
     border: none;
@@ -1466,26 +1464,35 @@ background-color: #f5f5f5;}
           <div class="contact-icon">
             <button id="phoneIcon" class="icon-button">
               <img src="images/gg_phone.png" alt="전화 아이콘">
-          </button>
-          <button id="emailIcon" class="icon-button">
-            <img src="images/material-symbols_mail-outline.png" alt="이메일 아이콘">
-          </button>
-
-                      <img src="images/lets-icons_insta.png" alt="a" />
+            </button>
+            <button id="emailIcon" class="icon-button">
+              <img src="images/material-symbols_mail-outline.png" alt="이메일 아이콘">
+            </button>
             
+            <a href="https://www.instagram.com/nuooooh/?next=%2F" target="_blank">
+            <img src="images/lets-icons_insta.png" alt="a" /></a>
           </div>
-          <div id="popup" class="popup hidden">
+          
+          <!-- 전화번호 팝업 -->
+          <div id="phonePopup" class="popup hidden">
             <div class="popup-content">
-                <span id="closeBtn" class="close-btn">&times;</span>
-                <p>010-4322-6262</p>
-                <button id="copyBtn" class="copy-btn">복사하기</button>
+              <span id="closePhoneBtn" class="close-btn">&times;</span>
+              <p>전화번호: 123-456-7890</p>
+              <button id="copyPhoneBtn" class="copy-btn">복사하기</button>
             </div>
-            <div id="emailPopup" class="popup hidden">
-              <div class="popup-content">
-                <span id="closeEmailBtn" class="close-btn">&times;</span>
-                <p>이메일: example@example.com</p>
-                <button id="copyEmailBtn" class="copy-btn">복사하기</button>
-              </div>
+          </div>
+          
+          <!-- 이메일 팝업 -->
+          <div id="emailPopup" class="popup hidden">
+            <div class="popup-content">
+              <span id="closeEmailBtn" class="close-btn">&times;</span>
+              <p>이메일: whdgns6312@naver.com</p>
+              <button id="copyEmailBtn" class="copy-btn">복사하기</button>
+            </div>
+          </div>
+
+            
+
             </div>
         </div>
         </div>
